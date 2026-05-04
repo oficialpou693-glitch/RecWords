@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecWords | Official</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --purple-bg: #2b1055;
+            --pink-neon: #ff66cc;
+            --orange-rec: #FF7043;
+            --glass: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: var(--purple-bg);
+            /* Gradiente inspirado na primeira foto (nebulosa roxa) */
+            background-image: 
+                radial-gradient(circle at top right, #4b1d8d, transparent),
+                radial-gradient(circle at bottom left, #1a0a33, transparent);
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container do Logo Customizado */
+        .header {
+            padding: 50px 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-box {
+            width: 120px;
+            height: 120px;
+            border: 5px solid var(--pink-neon);
+            border-radius: 28px;
+            margin: 0 auto 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 102, 204, 0.1);
+            box-shadow: 0 0 25px rgba(255, 102, 204, 0.4);
+            position: relative;
+        }
+
+        /* Olhinhos bravos do ícone */
+        .logo-box::before, .logo-box::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 10px;
+            background: var(--pink-neon);
+            top: 40px;
+        }
+        .logo-box::before { left: 20px; transform: rotate(25deg); }
+        .logo-box::after { right: 20px; transform: rotate(-25deg); }
+        .mouth {
+            width: 60px;
+            height: 20px;
+            border-bottom: 5px solid var(--pink-neon);
+            border-radius: 50%;
+            margin-top: 25px;
+        }
+
+        .brand-name {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--orange-rec);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            text-shadow: 3px 3px 0px white;
+            margin-top: 10px;
+        }
+
+        /* Seções de Informação */
+        .content {
+            width: 90%;
+            max-width: 500px;
+            padding-bottom: 50px;
+        }
+
+        .card {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--pink-neon);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .highlight {
+            color: #FFEB3B;
+            font-weight: bold;
+        }
+
+        /* Barra de Status/Data */
+        .countdown {
+            background: rgba(255, 112, 67, 0.2);
+            border-left: 5px solid var(--orange-rec);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Botão Mobile Friendly */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: var(--orange-rec);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(255, 112, 67, 0.4);
+            margin-top: 30px;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-box">
+            <div class="mouth"></div>
+        </div>
+        <div class="brand-name">RECWORDS</div>
+    </header>
+
+    <main class="content">
+        
+        <div class="card">
+            <h2>🇧🇷 Servidores Abertos</h2>
+            <p>O RecWords é o futuro. Enquanto os servidores oficiais do RecRoom se despedem em <strong>1 de Junho</strong>, nós garantimos que a diversão nunca termine com nossa versão modificada.</p>
+            <div class="countdown">
+                📅 Lançamento: <span class="highlight">20 de Junho</span>
+            </div>
+        </div>
+
+        <div class="card" style="animation-delay: 0.2s;">
+            <h2>🇺🇸 Open Servers</h2>
+            <p>RecWords is a modified version of RecRoom. We keep the spirit alive with open servers, ensuring the community stays together even after June 1st.</p>
+            <div class="countdown">
+                🚀 Release Date: <span class="highlight">June 20th</span>
+            </div>
+        </div>
+
+        <a href="#" class="btn">JOIN OUR DISCORD</a>
+
+    </main>
+
+    <footer>
+        &copy; 2026 RECWORDS PROJECT <br>
+        Built for the Community
+    </footer>
+
+</body>
+  </html>
+  
